@@ -47,6 +47,8 @@ public class LaunchSettings extends UiAutomatorTestCase {
 		sleep(2000);
 
 		String stringValue = getParams().getString("network-status");
+		if (stringValue == null)
+			stringValue = "4G";
 
 		Utils.click(new UiObject(new UiSelector().textContains(stringValue
 				.toUpperCase())));
