@@ -49,7 +49,7 @@ public class LaunchSettings extends UiAutomatorTestCase {
 		String stringValue = getParams().getString("network-status");
 
 		Utils.click(new UiObject(new UiSelector().textContains(stringValue
-				.toLowerCase())));
+				.toUpperCase())));
 
 		// Utils.click(Utils.getObjectWithClassName("android.widget.LinearLayout",
 		// 4));
