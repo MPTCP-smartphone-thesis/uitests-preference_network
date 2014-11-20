@@ -10,18 +10,16 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 public class LaunchSettings extends UiAutomatorTestCase {
 
 	private void changeMobilePreference() {
-		Utils.click(new UiObject(
-				new UiSelector().className("android.widget.ListView").instance(0).childSelector(
-						new UiSelector()
-						.className("android.widget.LinearLayout")
-.instance(6))));
-		sleep(2000);
 		Utils.click(new UiObject(new UiSelector()
-.className(
-				"android.widget.ListView")
+				.className("android.widget.ListView")
+				.instance(0)
 				.childSelector(
 						new UiSelector().className(
-"android.widget.LinearLayout")
+								"android.widget.LinearLayout").instance(6))));
+		sleep(2000);
+		Utils.click(new UiObject(new UiSelector().className(
+				"android.widget.ListView").childSelector(
+				new UiSelector().className("android.widget.LinearLayout")
 						.instance(8))));
 		sleep(2000);
 		Utils.click(new UiObject(new UiSelector()
@@ -47,4 +45,3 @@ public class LaunchSettings extends UiAutomatorTestCase {
 		changeMobilePreference();
 	}
 }
-
