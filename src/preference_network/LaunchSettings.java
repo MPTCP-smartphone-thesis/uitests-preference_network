@@ -40,7 +40,9 @@ public class LaunchSettings extends UiAutomatorTestCase {
 
 	public void testDemo() throws UiObjectNotFoundException {
 		assertTrue("OOOOOpps",
-				Utils.openApp(this, "Settings", "com.android.settings"));
+				Utils.openApp(this, "Settings",
+						"com.android.settings",
+						".Settings"));
 		sleep(2000);
 		changeMobilePreference();
 	}
